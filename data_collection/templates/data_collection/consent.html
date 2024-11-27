@@ -1,0 +1,15 @@
+<!-- data_collection/templates/data_collection/consent.html -->
+
+{% extends 'data_collection/base.html' %}
+
+{% block title %}Consent Form{% endblock %}
+
+{% block content %}
+    <h1>Consent for Data Collection</h1>
+    <p>Please read and agree to our <a href="{% url 'privacy_policy' %}">Privacy Policy</a> before using the platform.</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Agree and Continue</button>
+    </form>
+{% endblock %}

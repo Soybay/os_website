@@ -1,0 +1,15 @@
+<!-- data_collection/templates/data_collection/quiz.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operating Systems Quiz</title>
+</head>
+<body>
+    <h1>Operating Systems Quiz</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Quiz questions go here -->
+        <input type="submit" value="Submit Quiz">
+    </form>
+</body>
+</html>

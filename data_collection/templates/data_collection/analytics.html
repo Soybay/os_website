@@ -1,0 +1,21 @@
+<!-- data_collection/templates/data_collection/analytics.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Analytics</title>
+</head>
+<body>
+    <h1>Your Learning Analytics</h1>
+    <p>Total Page Visits: {{ page_visits }}</p>
+    <p>Average Quiz Score: {{ average_score }}</p>
+    <p>Inferred Learning Style: {{ learning_style }}</p>
+    <h2>Top Pages Visited</h2>
+    <ul>
+        {% for page in top_pages %}
+            <li>{{ page.path }} - {{ page.visits }} visits</li>
+        {% endfor %}
+    </ul>
+    <p>Total Time Spent on Site: {{ total_duration }}</p>
+</body>
+</html>

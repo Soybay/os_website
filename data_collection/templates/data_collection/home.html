@@ -1,0 +1,27 @@
+{% extends 'data_collection/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ request.user.username }}!</h1>
+    <p>Explore the platform to enhance your understanding of Operating Systems.</p>
+{% endblock %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Operating Systems Learning Platform</title>
+</head>
+<body>
+    <h1>Welcome to the Operating Systems Learning Platform</h1>
+    <p>Hello, {{ request.user.username }}!</p>
+    <nav>
+        <ul>
+            <li><a href="{% url 'quiz' %}">Take a Quiz</a></li>
+            <li><a href="{% url 'analytics' %}">View Analytics</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
